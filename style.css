@@ -1,0 +1,478 @@
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: rgb(28, 25, 40);
+    color: white;
+}
+
+/* Header */
+/* Header */
+.main-header {
+    background: transparent; /* Menggunakan background dari hero */
+    background-size: cover;
+    background-position: center;
+    backdrop-filter: blur(5px); /* Efek blur agar teks lebih terbaca */
+    padding: 1rem 4rem;
+    position: absolute; /* Memastikan header berada di atas hero */
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white; /* Pastikan teks di header terlihat */
+}
+
+/* Hero Section */
+.hero {
+    background-image: url('img/bg1.jpeg'); /* Background yang sama dengan header */
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    padding-left: 4rem;
+    padding-top: 6rem; /* Tambahkan padding agar konten tidak tertutup header */
+    position: relative; /* Memastikan elemen di dalam hero dapat ditempatkan dengan benar */
+}
+
+/* Header ketika scroll */
+.main-header.scrolled {
+    background: rgba(0, 0, 0, 0.6); /* Transparansi lebih saat scroll */
+    backdrop-filter: blur(5px);
+    transition: all 0.3s ease-in-out;
+}
+
+
+.main-header nav ul {
+    display: flex;
+    gap: 2rem;
+    list-style: none;
+}
+
+.main-header nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+.logo {
+    width: 120px; /* Sesuaikan ukuran logo */
+    height: auto; /* Agar proporsi tetap */
+}
+
+
+/* Hero Section */
+
+
+
+.hero-content {
+    max-width: 600px;
+}
+
+.hero-content h2 {
+    color: #4a90e2;
+    margin-bottom: 1rem;
+}
+
+.hero-content h1 {
+    font-size: 3rem;
+    margin-bottom: 0.5rem;
+}
+
+.cta-button {
+    background: #0272fc;
+    border: none;
+    padding: 1rem 2rem;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* What's New Section */
+/* What's New Section */
+.whats-new {
+    position: relative;
+    padding: 6rem 4rem;
+    color: white;
+    overflow: hidden;
+}
+
+.whats-new::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('./img/bg2.png'); /* Pastikan path benar */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    filter: blur(2px); /* Efek blur */
+    z-index: -1;
+}
+
+/* Tambahkan efek kaca buram pada teks */
+.news-item {
+    background: rgba(255, 255, 255, 0.2); /* Transparan putih */
+    backdrop-filter: blur(5px); /* Efek blur */
+    padding: 1.5rem;
+    text-align: center;
+    color: white;
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Efek hover untuk memperbesar sedikit */
+.news-item:hover {
+    transform: scale(1.05);
+}
+
+/* Beri efek gradient pada judul */
+h2 {
+    font-size: 3rem;
+    margin-bottom: 2rem;
+    color: #ffffffc7; /* Warna neon biru terang */
+    text-shadow: 0 0 5px rgb(172, 48, 48), 0 0 10px #95158a, 0 0 15px #190a0a; /* Efek neon biru */
+
+    font-size: 2.5rem;
+    text-align: center;
+}
+
+/* Atur grid layout */
+.news-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    margin-top: 2rem;
+}
+
+/* Styling untuk gambar */
+.news-item img {
+    width: 100%;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.news-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.news-item {
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.news-item img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+
+/* Tips & Tricks Section */
+.tips-tricks {
+    position: relative;
+    padding: 4rem;
+    color: white;
+    border-radius: 10px; /* Agar sudut lebih halus */
+    overflow: hidden;
+}
+
+/* Pseudo-element untuk efek blur yang menyeluruh */
+.tips-tricks::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('./img/bg3.png'); /* Ganti dengan gambar yang sesuai */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    filter: blur(2px); /* Efek blur lebih kuat */
+    z-index: -1; /* Pastikan tetap di belakang teks */
+}
+
+/* Grid layout */
+.tips-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1rem;
+    margin-top: 2rem;
+    position: relative; /* Pastikan kontennya di atas background */
+}
+
+/* Item Tips dengan efek kaca buram */
+.tip-item {
+    position: relative;
+    overflow: hidden;
+
+    padding: 1.5rem;
+    text-align: center;
+    color: white;
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Efek hover agar lebih interaktif */
+.tip-item:hover {
+    transform: scale(1.05);
+}
+
+/* Gambar di dalam tip-item */
+.tip-item img {
+    width: 100%;
+    border-radius: 8px;
+}
+
+
+/* Efek hover agar lebih interaktif */
+.tip-item:hover {
+    transform: scale(1.05);
+}
+
+/* Gambar di dalam tip-item */
+.tip-item img {
+    width: 100%;
+    border-radius: 8px;
+}
+
+
+/* Hero Selection Section */
+/* Hero Selection Styles */
+/* Hero Selection Styles */
+.hero-selection {
+    position: relative;
+    padding: 4rem;
+    text-align: center;
+    overflow: hidden;
+}
+
+.hero-selection::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('img/bg4.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    filter: blur(2px);
+    z-index: -1;
+}
+
+.hero-selection h2 {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    position: relative;
+}
+
+.hero-carousel {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 2rem;
+    position: relative;
+}
+
+.hero-cards {
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+}
+
+.hero-card {
+    position: relative;
+    width: 200px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.hero-card.active {
+    transform: scale(1.2);
+}
+
+.hero-image {
+    border-radius: 10px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 300px;
+}
+
+.hero-image img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+    transition: transform 0.3s ease;
+}
+
+.hero-card:hover .hero-image img {
+    transform: scale(1.1);
+}
+
+.carousel-btn {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 2rem;
+    cursor: pointer;
+    padding: 1rem;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.carousel-btn.prev {
+    left: -50px;
+}
+
+.carousel-btn.next {
+    right: -50px;
+}
+
+
+/* Battle Map Section */
+.battle-map {
+    position: relative;
+    position: relative;
+    text-align: center;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 25vh;
+}
+
+.map-container {
+    position: relative;
+    margin-top: 2rem;
+}
+
+.map-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+/* Hero Selection Styles */
+
+.download-btn {
+    background: #505050;
+    border: none;
+    padding: 1rem 3rem;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.download-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+
+/* Footer */
+footer {
+    background: #1a1a1a;
+    padding: 4rem;
+}
+
+.footer-content {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    margin-bottom: 2rem;
+    display: flex;
+    justify-content: center; /* Pusatkan secara horizontal */
+    align-items: center; /* Pusatkan secara vertikal */
+    text-align: center; /* Pastikan teks berada di tengah */
+    
+}
+
+
+/* Styling untuk ikon sosial media */
+ 
+
+/* Styling untuk container */
+
+.social-container {
+
+    color: white;
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column; /* Susun elemen secara vertikal */
+    align-items: center; /* Posisikan elemen ke tengah */
+}
+
+.social-container h2 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem; /* Jarak antara teks dan ikon */
+}
+
+/* Styling untuk ikon sosial media */
+.social-icons {
+    display: flex;
+    gap: 1.5rem;
+    justify-content: center;
+    margin-top: 10px; /* Beri sedikit jarak dari teks */
+}
+
+.social-icon {
+    width: 60px;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    color: white;
+    font-size: 1.8rem;
+    text-decoration: none;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Warna background masing-masing ikon */
+.facebook { background-color: #3b5998; }
+.instagram { background-color: #b21f1f; }
+.tiktok { background-color: #000; } /* TikTok dengan warna hitam */
+
+/* Efek hover */
+.social-icon:hover {
+    transform: scale(1.1);
+    box-shadow: 0px 0px 15px rgba(22, 17, 17, 0.105);
+}
+
+
+.footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 2rem;
+    border-top: 1px solid #333;
+    justify-content: center; /* Pusatkan secara horizontal */
+    align-items: center; /* Pusatkan secara vertikal */
+    text-align: center;
+}
